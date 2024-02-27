@@ -133,6 +133,8 @@ main .wrapper {
     text-decoration: none;
     transition: all 0.5s;
     overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
     position: relative;
 }
 
