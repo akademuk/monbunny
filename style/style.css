@@ -890,7 +890,7 @@ input::placeholder {
     .main__card>a:before {
         border-radius: 10px;
     }
-    .recaptcha {
+    .modal__wrapper .recaptcha {
         padding: 0 20px;
         box-sizing: border-box;
     }
