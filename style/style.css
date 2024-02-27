@@ -890,6 +890,14 @@ input::placeholder {
     .main__card>a:before {
         border-radius: 10px;
     }
+    .recaptcha {
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    .recaptcha img {
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 @media(max-width: 767px) {
