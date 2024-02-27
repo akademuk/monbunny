@@ -59,6 +59,8 @@ main .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 18px auto 20px auto;
     text-align: center;
@@ -115,7 +117,8 @@ main .wrapper {
 }
 
 .main__card-logo img {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .main__card>a {
@@ -162,9 +165,11 @@ main .wrapper {
     position: absolute;
     left: -25%;
     top: -25%;
-    animation: animate 2s infinite linear;
+    -webkit-animation: animate 2s infinite linear;
+            animation: animate 2s infinite linear;
     background-image: conic-gradient(#EF5D89, #EF5D89, #EF5D89, #EF5D89, #A65DEF, #A65DEF, #A65DEF);
-    filter: blur(20px);
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
 }
 
 .main__card>a::after {
@@ -175,6 +180,12 @@ main .wrapper {
     top: 2%;
     left: 2%;
     border-radius: 5px;
+}
+
+@-webkit-keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes animate {
@@ -199,7 +210,8 @@ main .wrapper {
 }
 
 .main__card>a:hover span::before {
-    filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(4270%) hue-rotate(305deg) brightness(100%) contrast(102%);
+    -webkit-filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(4270%) hue-rotate(305deg) brightness(100%) contrast(102%);
+            filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(4270%) hue-rotate(305deg) brightness(100%) contrast(102%);
 }
 
 .main__card>a:active {
@@ -222,7 +234,8 @@ main .wrapper {
 }
 
 .main__card>a:active span::before {
-    filter: none;
+    -webkit-filter: none;
+            filter: none;
 }
 
 
@@ -286,7 +299,8 @@ footer .wrapper {
 }
 
 .footer__line img {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .footer__top-logo .header_text h2 {
@@ -377,6 +391,34 @@ footer .wrapper {
    align-items: center;
 }
 
+input::-webkit-input-placeholder {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+input::-moz-placeholder {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+input:-ms-input-placeholder {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+input::-ms-input-placeholder {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
 input::placeholder {
     color: #000;
     font-family: "Montserrat", sans-serif;
@@ -412,7 +454,8 @@ input::placeholder {
     font-size: 10px;
     font-weight: 400;
     line-height: 125%;
-    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
     background: none;
 }
 
@@ -432,7 +475,8 @@ input::placeholder {
     font-size: 10px;
     font-weight: 400;
     line-height: 104.9%;
-    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
 }
 
 .footer__main-right p {
@@ -674,7 +718,8 @@ input::placeholder {
 .footer__main-left form .recaptcha img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 @media(max-width: 1279px) {
@@ -705,7 +750,8 @@ input::placeholder {
     }
 
     .footer__line img {
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
         max-width: 382px;
     }
 
@@ -795,6 +841,7 @@ input::placeholder {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        gap: 0;
     }
     #blockPhone .modal-content form #tel2{
         color: #000;
@@ -804,6 +851,34 @@ input::placeholder {
         line-height: normal;
         width: 100%;
         padding: 0;
+    }
+    .blockPhone__label label input::-webkit-input-placeholder{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .blockPhone__label label input::-moz-placeholder{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .blockPhone__label label input:-ms-input-placeholder{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .blockPhone__label label input::-ms-input-placeholder{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
     .blockPhone__label label input::placeholder{
         color: #000;
