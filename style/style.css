@@ -160,11 +160,11 @@ main .wrapper {
 
 .main__card>a:before {
     content: "";
-    height: 150%;
-    width: 150%;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    left: -25%;
-    top: -25%;
+    left: 0%;
+    top: 0%;
     -webkit-animation: animate 2s infinite linear;
             animation: animate 2s infinite linear;
     background-image: conic-gradient(#EF5D89, #EF5D89, #EF5D89, #EF5D89, #A65DEF, #A65DEF, #A65DEF);
@@ -172,7 +172,7 @@ main .wrapper {
             filter: blur(20px);
 }
 
-.main__card>a::after {
+/* .main__card>a::after {
     position: absolute;
     content: "";
     height: 96%;
@@ -180,7 +180,7 @@ main .wrapper {
     top: 2%;
     left: 2%;
     border-radius: 5px;
-}
+} */
 
 @-webkit-keyframes animate {
     100% {
