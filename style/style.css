@@ -786,6 +786,28 @@ input::placeholder {
     #blockPhone .modal-content .modal-close {
         right: 14px;
     }
+    .blockPhone__label label {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    #blockPhone .modal-content form #tel2{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 100%;
+    }
+    .blockPhone__label label input::placeholder{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 @media(max-width: 767px) {
