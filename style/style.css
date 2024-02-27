@@ -338,8 +338,9 @@ footer .wrapper {
     margin-bottom: 13px;
     flex-direction: column;
 }
-
-.footer__main-left form #tel {
+.tel__label {
+    display: flex;
+    align-items: center;
     height: 100%;
     width: 190px;
     border: 1px solid #000;
@@ -351,6 +352,17 @@ footer .wrapper {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 400;
+}
+.tel__label label {
+    height: 17px;
+    padding-top: 7px;
+}
+.footer__main-left form #tel {
+   border: none;
+   color: #000;
+   font-family: "Montserrat", sans-serif;
+   font-size: 12px;
+   font-weight: 400;
 }
 
 input::placeholder {
