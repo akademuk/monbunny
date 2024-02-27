@@ -135,6 +135,7 @@ main .wrapper {
     overflow: hidden;
     touch-action: none;
     -ms-touch-action: none;
+    -webkit-overflow-scrolling: touch;
     position: relative;
 }
 
