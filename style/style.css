@@ -800,6 +800,7 @@ input::placeholder {
         font-weight: 400;
         line-height: normal;
         width: 100%;
+        padding: 0;
     }
     .blockPhone__label label input::placeholder{
         color: #000;
