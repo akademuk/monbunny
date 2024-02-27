@@ -123,16 +123,8 @@ main .wrapper {
     margin: 27px auto 0 auto;
     height: 50px;
     border-radius: 15px;
-    background: linear-gradient(131deg, #A65DEF 26.76%, #EF5D89 86.57%);
-    background-size: 200% 200%; /* увеличиваем размер градиента для анимации */
-    animation: gradientRotation 4s linear infinite; /* 4s - время анимации, linear - тип анимации, infinite - бесконечно повторять */
+    background: #A65DEF;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
-    color: #FFF;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 27px;
-    font-family: "Montserrat", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,42 +132,65 @@ main .wrapper {
     border: none;
     text-decoration: none;
     transition: all 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+.main__card a span {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
 }
 
-@keyframes rotateColor {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+
+.main__card a:before {
+	content: "";
+	height: 150%;
+	width: 150%;
+	position: absolute;
+	left: -25%;
+	top: -25%;
+	animation: animate 2s infinite linear;
+	background-image: conic-gradient(#EF5D89, #EF5D89, #EF5D89 , #EF5D89 , #A65DEF , #A65DEF , #A65DEF );
+    filter: blur(20px);
+}
+.main__card a::after {
+	position: absolute;
+	content: "";
+	height: 96%;
+	width: 96%;
+	top: 2%;
+	left: 2%;
+	border-radius: 5px;
+}
+@keyframes animate {
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
-:root {
-    --gradient-color-1: #A65DEF;
-    --gradient-color-2: #EF5D89;
-    --animation-duration: 4s;
-}
 
-@keyframes gradientRotation {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
 
 .main__card a:hover {
-    background: linear-gradient(131deg, #5D5FEF 26.76%, #5D5FEF 86.57%);
+    background: #5D5FEF;
+}
+.main__card a:hover::before {
+    content: none;
+}
+.main__card a:hover span{
     color: #FF6895;
     transition: all 0.5s;
 }
 
-.main__card a:hover::before {
+.main__card a:hover span::before {
     filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(4270%) hue-rotate(305deg) brightness(100%) contrast(102%);
 }
 
@@ -185,13 +200,17 @@ main .wrapper {
     color: #FFF;
     transform: translateY(20px);
 }
-.main__card a:active::before {
+.main__card a:active span {
+    color: #FFF;
+}
+.main__card a:active span::before {
     filter: none;
 }
 
 
 
-.main__card a::before {
+
+.main__card a span::before {
     content: "";
     background: url(../img/btn.svg);
     background-repeat: no-repeat;
@@ -864,6 +883,7 @@ input::placeholder {
         background: #EBEBFF;
     }
 }
+
 
 
 
