@@ -13,8 +13,6 @@
     <title>monbunny</title>
   </head>
   <body>
-    <div class="box"></div>
-
     <div id="blockPhone" class="modal">
       <div class="modal-content">
         <button class="modal-close">
@@ -27,7 +25,10 @@
             номер мобільного телефону.
           </p>
           <form>
-            <input type="tel" id="tel2" placeholder="+38(0хх) ххх-хх-хх" />
+            <div class="blockPhone__label">
+              <label for="tel2">+38(0</label>
+              <input type="tel" id="tel2" placeholder="хх) ххх-хх-хх" />
+            </div>
             <div class="recaptcha">
               <img src="img/recaptha.png" alt="" />
             </div>
@@ -363,7 +364,7 @@
 
     <script>
       $("#tel").mask("99) 999-99-99");
-      $("#tel2").mask("+38(099) 999-99-99");
+      $("#tel2").mask("99) 999-99-99");
     </script>
 
     <script>

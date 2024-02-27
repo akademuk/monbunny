@@ -354,12 +354,14 @@ footer .wrapper {
     font-weight: 400;
 }
 .tel__label label {
-    height: 17px;
-    padding-top: 7px;
+    height: 15px;
+    display: flex;
+    align-items: center;
     color: #000;
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 400;
+    margin-top: 2px;
 }
 .footer__main-left form #tel {
    border: none;
@@ -367,6 +369,9 @@ footer .wrapper {
    font-family: "Montserrat", sans-serif;
    font-size: 12px;
    font-weight: 400;
+   padding: 0;
+   display: flex;
+   align-items: center;
 }
 
 input::placeholder {
@@ -582,7 +587,7 @@ input::placeholder {
     margin-bottom: 16px;
 }
 
-#blockPhone .modal-content form #tel2 {
+.blockPhone__label {
     border-radius: 3px;
     border: 1px solid #CCC;
     background: #FFF;
@@ -591,6 +596,15 @@ input::placeholder {
     height: 40px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.blockPhone__label input  {
+    border: none;
 }
 
 #blockPhone .modal-content form #tel2 {
@@ -758,8 +772,11 @@ input::placeholder {
         padding: 0 40px;
     }
 
-    #blockPhone .modal-content form #tel2 {
+    .blockPhone__label {
         width: calc(100% - 80px);
+        margin: 0 auto 20px auto;
+        padding-left: 20px;
+        box-sizing: border-box;
     }
 
     .container__flex {
