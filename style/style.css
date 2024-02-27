@@ -668,6 +668,42 @@ input::placeholder {
     .footer__main-left form {
         margin-bottom: 18px;
     }
+    #blockPhone .modal-content {
+        width: 300px;
+        height: 380px;
+        border-radius: 20px;
+        background: #FFF;
+        padding: 53px 0 40px 0;
+    }
+    #privecy .modal-content {
+        width: 300px;
+        height: 380px;
+        border-radius: 20px;
+        background: #FFF;
+        padding: 31px 22px 21px 30px;
+    }
+    .privecy__scroll {
+        padding-right: 13px;
+        height: 83%;
+    }
+    .privecy .modal-content .modal-close2 {
+        right: 14px;
+    }
+    #blockPhone .modal-content .modal__wrapper h2 {
+        padding: 0 40px;
+    }
+    #blockPhone .modal-content .modal__wrapper p {
+        padding: 0 40px;
+    }
+    #blockPhone .modal-content form #tel2 {
+        width: calc(100% - 80px);
+    }
+    .container__flex {
+        padding: 0 40px;
+    }
+    #blockPhone .modal-content .modal-close {
+        right: 14px; 
+    }
 }
 
 @media(max-width: 767px) {
