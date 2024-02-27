@@ -356,6 +356,10 @@ footer .wrapper {
 .tel__label label {
     height: 17px;
     padding-top: 7px;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
 }
 .footer__main-left form #tel {
    border: none;
